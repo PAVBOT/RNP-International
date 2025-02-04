@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNP News</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Customizing Tailwind for smooth transitions */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #63b3ed;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6 font-sans">
+    <div id="root"></div>
+
+    <div class="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6 max-w-screen-xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-6xl font-extrabold text-white tracking-tight">RNP News</h1>
+            <p class="text-xl mt-2 italic text-gray-300">"The start, to end"</p>
+            <p class="text-sm mt-1 text-gray-500">We're here to keep you informed.</p>
+            
+            <!-- Navigation -->
+            <nav class="mt-6">
+                <a href="tech.html" class="nav-link text-lg mx-3 hover:text-blue-400">Tech</a>
+                <a href="#art" class="nav-link text-lg mx-3 hover:text-blue-400">Art</a>
+                <a href="#science" class="nav-link text-lg mx-3 hover:text-blue-400">Science</a>
+                <a href="#business" class="nav-link text-lg mx-3 hover:text-blue-400">Business</a>
+                <a href="#health" class="nav-link text-lg mx-3 hover:text-blue-400">Health</a>
+                <a href="#sports" class="nav-link text-lg mx-3 hover:text-blue-400">Sports</a>
+                <a href="#entertainment" class="nav-link text-lg mx-3 hover:text-blue-400">Entertainment</a>
+                <a href="#world" class="nav-link text-lg mx-3 hover:text-blue-400">World</a>
+            </nav>
+        </header>
+
+        <main class="text-center max-w-2xl mx-6">
+            <p class="text-lg text-gray-300 mb-6">Stay updated with the latest news, breaking stories, and insightful analyses from around the world.</p>
+            <button class="bg-blue-600 text-white py-2 px-6 rounded-lg transition-all duration-300 transform hover:bg-blue-700 focus:outline-none">Read Latest News</button>
+        </main>
+        <!-- News Article Section -->
+
+        <footer class="mt-12 py-6 text-center text-gray-500 border-t border-gray-700 w-full">
+            <p class="footer-text mb-2">© 2025 RNP News. All rights reserved.</p>
+            <p>
+                <a href="/privacy" class="footer-link">Privacy Policy</a> | 
+                <a href="/terms" class="footer-link">Terms of Service</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
