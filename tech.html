@@ -3,73 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RNP International - Chat</title>
+    <title>RNP International - Latest News</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #1a202c; /* Tailwind's gray-900 */
-            color: #edf2f7; /* Tailwind's gray-100 */
+            background-color: #1a202c; /* Dark theme */
+            color: #edf2f7; /* Light text */
             font-family: 'Inter', sans-serif;
         }
-        .highlight {
-            color: #63b3ed; /* Tailwind's blue-400 */
+        .news-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
         }
-        .nav-link {
-            transition: color 0.3s ease;
+        .news-card {
+            background: #2d3748;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .nav-link:hover {
-            color: #63b3ed; /* Tailwind's blue-400 */
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #63b3ed;
         }
-        .footer-text {
-            font-size: 0.875rem;
-            color: #a0aec0; /* Tailwind's gray-400 */
+        .news-desc {
+            margin-top: 10px;
+            color: #cbd5e0;
         }
-        .footer-link:hover {
-            text-decoration: underline;
+        .news-btn {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 10px 15px;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .news-btn:hover {
+            background: #3182ce;
         }
     </style>
 </head>
-<body class="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
-    <!-- Title -->
-    <h1 class="text-4xl font-bold mt-5 animate-bounce">RNP International - Chat</h1>
-    
-    <!-- Chat Box -->
-    <div class="w-full max-w-2xl mt-5 bg-gray-800 rounded-lg p-5 shadow-lg">
-        <div id="chat-messages" class="h-80 overflow-y-auto p-3 space-y-3 border-b border-gray-700">
-            <!-- Chat messages will appear here -->
-        </div>
-        <div class="mt-3 flex">
-            <input id="chat-input" type="text" class="flex-1 p-2 bg-gray-700 text-white rounded-lg focus:outline-none" placeholder="Type a message...">
-            <button id="send-btn" class="ml-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">Send</button>
-        </div>
-    </div>
+<body>
 
-    <!-- News Articles Section -->
-    <main class="text-center max-w-2xl mx-6 mt-10">
-        <!-- Article 1 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-4xl font-bold text-white mb-4">Hundreds of Weather Forecasters Fired in Latest Wave of DOGE Cuts</h2>
-            <p class="text-lg text-gray-300 mb-6">Hundreds of weather forecasters and other federal National Oceanic and Atmospheric Administration employees on probationary status were fired Thursday, lawmakers and weather experts said. The firings come amid efforts by billionaire Elon Musk and his Department of Government Efficiency to shrink a federal workforce that President Donald Trump ...  Rep. Grace Meng, D ...  This is unconscionable." :contentReference[oaicite:0]{index=0}</p>
-            <button class="bg-blue-600 text-white py-2 px-6 rounded-lg transition-all duration-300 transform hover:bg-blue-700 focus:outline-none">Read More</button>
+    <header class="text-center py-6">
+        <h1 class="text-4xl font-bold">RNP International - Latest News</h1>
+    </header>
+
+    <main class="news-container">
+
+        <!-- News Article 1 -->
+        <div class="news-card">
+            <h2 class="news-title">Hundreds of Weather Forecasters Fired in Latest Cuts</h2>
+            <p class="news-desc">Hundreds of weather forecasters and NOAA employees on probationary status were fired Thursday as part of government workforce reductions...</p>
+            <a href="https://apnews.com/article/a65360a1eb2500b7d47c9c966e383f4a" target="_blank" class="news-btn">Read More</a>
         </div>
 
-        <!-- Article 2 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-4xl font-bold text-white mb-4">Rep. Ritchie Torres Criticizes Governor Hochul Over Mask Ban Delays</h2>
-            <p class="text-lg text-gray-300 mb-6">Rep. Ritchie Torres criticized New York Governor Kathy Hochul for hesitating on legislation to ban public mask-wearing intended to curb hate-driven actions. This comes after anti-Israel protesters, wearing keffiyeh, took control of a Barnard College building. Torres argued that legislation restricting masks is needed to prevent harassment and uphold civil rights. He emphasized that a mask ban has historical precedent in combating the Ku Klux Klan and encouraged the Governor to implement decisive measures. :contentReference[oaicite:1]{index=1}</p>
-            <button class="bg-blue-600 text-white py-2 px-6 rounded-lg transition-all duration-300 transform hover:bg-blue-700 focus:outline-none">Read More</button>
+        <!-- News Article 2 -->
+        <div class="news-card">
+            <h2 class="news-title">Rep. Ritchie Torres Criticizes Governor Hochul Over Mask Ban</h2>
+            <p class="news-desc">Rep. Ritchie Torres slammed New York Governor Kathy Hochul for delaying a decision on banning public mask-wearing to curb hate crimes...</p>
+            <a href="https://nypost.com/2025/02/27/us-news/rep-ritchie-torres-raps-gov-hochul-for-foot-dragging-on-approving-mask-ban-after-latest-anti-israel-protest-on-nyc-campus/" target="_blank" class="news-btn">Read More</a>
         </div>
 
-        <!-- Article 3 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-4xl font-bold text-white mb-4">Aboriginal Rangers Help Foil Latest Illegal Fishing Operation</h2>
-            <p class="text-lg text-gray-300 mb-6">Aboriginal rangers from the Bawinanga Homelands Aboriginal Corporation’s Djelk Rangers played a crucial role in intercepting an illegal fishing operation off the Maningrida coastline. They reported the sighting of foreign vessels, prompting the Australian Border Force (ABF) to dispatch vessels to the region. Authorities seized 1,200 kg of trepang and fishing equipment from two Indonesian vessels, and arrested 12 individuals who will face court in Darwin. The vessels were subsequently destroyed. :contentReference[oaicite:2]{index=2}</p>
-            <button class="bg-blue-600 text-white py-2 px-6 rounded-lg transition-all duration-300 transform hover:bg-blue-700 focus:outline-none">Read More</button>
+        <!-- News Article 3 -->
+        <div class="news-card">
+            <h2 class="news-title">Aboriginal Rangers Help Foil Illegal Fishing Operation</h2>
+            <p class="news-desc">Aboriginal rangers played a crucial role in intercepting an illegal fishing operation off the Maningrida coastline...</p>
+            <a href="https://www.couriermail.com.au/news/djelk-rangers-australian-border-force-intercept-indonesian-fishing-vessels-off-nt-coastline/news-story/a092eeeb8de63e13f88ffc0fc74d3e19" target="_blank" class="news-btn">Read More</a>
         </div>
 
-        <!-- Article 4 -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-4xl font-bold text-white mb-4">Morning Mail: Trump Tariff Turmoil and Other Top Stories</h2>
-            <p class="text-lg text-gray-300 mb-6">Today’s Morning Mail covers several major news stories from around the globe. Donald Trump plans to implement tariffs on Canada and Mexico starting next Tuesday, raising concerns about possible economic turmoil. In Australia, third-party groups are targeting the Greens and teal independents leading up to the federal election. Hollywood mourns the death of actor Gene Hackman and his wife under suspicious circumstances. Tesla’s Elon Musk faces conflicts of interest concerns.
-::contentReference[oaicite:3]{index=3}
- 
+        <!-- News Article 4 -->
+        <div class="news-card">
+            <h2 class="news-title">Morning Mail: Trump Tariff Turmoil and Other Top Stories</h2>
+            <p class="news-desc">Donald Trump plans to implement tariffs on Canada and Mexico, raising concerns about economic impact...</p>
+            <a href="https://www.theguardian.com/australia-news/2025/feb/28/morning-mail-trump-tariffs-climate-protests-us-border-crackdown" target="_blank" class="news-btn">Read More</a>
+        </div>
+
+    </main>
+
+    <footer class="text-center mt-10">
+        <p class="text-sm text-gray-400">© 2025 RNP International. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
